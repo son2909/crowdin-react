@@ -36,7 +36,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {t("Edit ")}
+          {t("Edit")}
           <code>{t("src/App.js")}</code> {t("and save to reload.")}
         </p>
         <a
