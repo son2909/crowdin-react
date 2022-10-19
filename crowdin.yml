@@ -1,3 +1,7 @@
+project_id: "543860"
+api_token: "9fa673ce9849b28ce4a780dcbff95011f4a0d8904a4e07f3c3314d656716d331871daa0623460d5f"
+preserve_hierarchy: true
+
 files:
   - source: /src/i18n/locales/en/*
     translation: /src/i18n/locales/%two_letters_code%/%original_file_name%
