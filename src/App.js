@@ -3,14 +3,16 @@ import "./App.css";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import translationEN from "./i18n/locales/en/translation.json";
+import translationVN from "./i18n/locales/vi/translation.json";
+import { useState } from "react";
 // the translations
 const resources = {
   en: {
     translation: translationEN,
   },
-  // de: {
-  //   translation: translationDE,
-  // },
+  vi: {
+    translation: translationVN,
+  },
 };
 
 i18n
@@ -21,7 +23,7 @@ i18n
     // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
     resources,
     lng: "en", // if you're using a language detector, do not define the lng option
-    fallbackLng: "en",
+    // fallbackLng: "en",
 
     interpolation: {
       escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
@@ -29,7 +31,11 @@ i18n
   });
 
 function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const setLang = (lang) => {
+    i18n.changeLanguage(lang);
+  };
 
   return (
     <div className="App">
@@ -45,8 +51,19 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {t("Wellcome to my ReactJs")}
+          {t("Welcome to React")}
         </a>
+        <p>{t("description")}</p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "500px",
+          }}
+        >
+          <button onClick={() => setLang("vi")}>Viet Nam</button>
+          <button onClick={() => setLang("en")}>English</button>
+        </div>
       </header>
     </div>
   );
