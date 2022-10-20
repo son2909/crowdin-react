@@ -58,6 +58,7 @@ function App() {
         </a>
         <p>{t("description")}</p>
         <p>{t("footer")}</p>
+        <p>{t("my_name")}</p>
         <div
           style={{
             display: "flex",
