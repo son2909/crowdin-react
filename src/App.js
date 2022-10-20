@@ -4,7 +4,7 @@ import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import translationEN from "./i18n/locales/en/translation.json";
 import translationVN from "./i18n/locales/vi/translation.json";
-import { useState } from "react";
+import translationJP from "./i18n/locales/ja/translation.json";
 // the translations
 const resources = {
   en: {
@@ -12,6 +12,9 @@ const resources = {
   },
   vi: {
     translation: translationVN,
+  },
+  ja: {
+    translation: translationJP,
   },
 };
 
@@ -64,6 +67,7 @@ function App() {
         >
           <button onClick={() => setLang("vi")}>Viet Nam</button>
           <button onClick={() => setLang("en")}>English</button>
+          <button onClick={() => setLang("ja")}>Japan</button>
         </div>
       </header>
     </div>
