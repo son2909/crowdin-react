@@ -54,6 +54,7 @@ function App() {
           {t("Welcome to React")}
         </a>
         <p>{t("description")}</p>
+        <p>{t("footer")}</p>
         <div
           style={{
             display: "flex",
