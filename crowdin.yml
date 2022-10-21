@@ -1,3 +1,5 @@
+# project_id: "543860"
+# api_token: "ab8bf4cc3833e6abe0cf967f38884c012642b8a4a59307aae905089b79aa0d65f95bc602ce3b1cc3"
 files:
   - source: /src/i18n/locales/en/*.json
     translation: /src/i18n/locales/%two_letters_code%/%original_file_name%
